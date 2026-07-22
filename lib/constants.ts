@@ -68,12 +68,11 @@ export const GALLERY: GalleryItem[] = [
   { title: "Baby shower Pequeño Príncipe", category: "Eventos", image: "/images/work-5.jpg" },
   { title: "Cumpleaños esmeralda y dorado", category: "Eventos", image: "/images/work-6.jpg" },
   { title: "Ambientación dorada", category: "Eventos", image: "/images/work-7.jpg" },
-  { title: "Salón contemporáneo", category: "Interiorismo", image: "/images/gallery-1.jpg" },
-  { title: "Celebración íntima", category: "Eventos", image: "/images/gallery-2.jpg" },
-  { title: "Suite principal", category: "Interiorismo", image: "/images/gallery-3.jpg" },
-  { title: "Rincón de lectura", category: "Interiorismo", image: "/images/gallery-4.jpg" },
-  { title: "Mesa de gala", category: "Eventos", image: "/images/gallery-5.jpg" },
-  { title: "Estudio boutique", category: "Interiorismo", image: "/images/gallery-6.jpg" },
+  { title: "Cumpleaños temático La Granja", category: "Eventos", image: "/images/work-8.jpg" },
+  { title: "Cumpleaños temático trenes", category: "Eventos", image: "/images/work-9.jpg" },
+  { title: "Cumpleaños temático fútbol", category: "Eventos", image: "/images/work-10.jpg" },
+  { title: "Cumpleaños temático capibara", category: "Eventos", image: "/images/work-11.jpg" },
+  { title: "Ambientación dorada con neón", category: "Eventos", image: "/images/work-12.jpg" },
 ];
 
 export const PROCESS_STEPS = [
