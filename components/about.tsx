@@ -1,8 +1,8 @@
-import Image from "next/image";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { RevealText } from "@/components/ui/reveal-text";
 import { FloralSprig } from "@/components/ui/floral-sprig";
 import { TiltCard } from "@/components/ui/tilt-card";
+import { AnimatedLogoPanel } from "@/components/ui/animated-logo-panel";
 
 export function About() {
   return (
@@ -10,15 +10,7 @@ export function About() {
       <div className="container-px mx-auto grid max-w-content items-center gap-16 lg:grid-cols-2 lg:gap-24">
         <ScrollReveal className="relative order-2 lg:order-1">
           <TiltCard className="aspect-[4/5]" maxTilt={4}>
-            <div className="group relative h-full w-full overflow-hidden rounded-[2px]">
-              <Image
-                src="/images/about.jpg"
-                alt="Composición decorativa SOLCA Decoraciones"
-                fill
-                sizes="(min-width: 1024px) 45vw, 90vw"
-                className="object-cover transition-transform duration-[1200ms] ease-premium group-hover:scale-[1.05]"
-              />
-            </div>
+            <AnimatedLogoPanel />
           </TiltCard>
           <div className="absolute -bottom-8 -right-6 hidden h-32 w-32 flex-col items-center justify-center gap-2 border border-gold/40 bg-cream sm:flex">
             <FloralSprig className="h-6 w-auto" />
@@ -55,7 +47,7 @@ export function About() {
           <ScrollReveal delay={0.25}>
             <dl className="mt-12 grid grid-cols-2 gap-8 border-t border-stone-200 pt-8 sm:max-w-md">
               <div>
-                <dt className="font-display text-3xl text-ink">+10</dt>
+                <dt className="font-display text-3xl text-ink">+2</dt>
                 <dd className="mt-1 text-xs uppercase tracking-widest2 text-stone-500">
                   Años de experiencia
                 </dd>
