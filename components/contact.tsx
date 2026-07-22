@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
+import { motion } from "framer-motion";
 import { Instagram, Mail, MapPin, Phone, Send } from "lucide-react";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { RevealText } from "@/components/ui/reveal-text";
@@ -148,14 +149,31 @@ export function Contact() {
 
               <div className="sm:col-span-2">
                 <Magnetic className="inline-block w-full sm:w-auto">
-                  <button
+                  <motion.button
                     type="submit"
                     data-cursor-hover
-                    className="group inline-flex w-full items-center justify-center gap-2 rounded-full bg-ink px-8 py-3.5 text-sm tracking-wide text-cream transition-colors duration-300 ease-premium hover:bg-stone-800 sm:w-auto"
+                    initial="rest"
+                    animate="rest"
+                    whileHover="hover"
+                    whileTap={{ scale: 0.96 }}
+                    transition={{ type: "spring", stiffness: 420, damping: 26 }}
+                    className="group relative inline-flex w-full items-center justify-center gap-2 overflow-hidden rounded-full bg-ink px-8 py-3.5 text-sm tracking-wide text-cream transition-colors duration-300 ease-premium hover:bg-stone-800 sm:w-auto"
                   >
-                    Enviar mensaje
-                    <Send size={15} strokeWidth={1.5} />
-                  </button>
+                    <motion.span
+                      aria-hidden="true"
+                      variants={{ rest: { x: "-130%" }, hover: { x: "130%" } }}
+                      transition={{ duration: 0.75, ease: [0.16, 1, 0.3, 1] }}
+                      className="pointer-events-none absolute inset-y-0 left-0 w-1/3 -skew-x-12 bg-white/10"
+                    />
+                    <motion.span
+                      variants={{ rest: { scale: 1 }, hover: { scale: 1.05 } }}
+                      transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+                      className="relative z-10 inline-flex items-center gap-2"
+                    >
+                      Enviar mensaje
+                      <Send size={15} strokeWidth={1.5} />
+                    </motion.span>
+                  </motion.button>
                 </Magnetic>
                 {status === "sent" && (
                   <p className="mt-4 text-sm text-stone-500">

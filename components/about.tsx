@@ -2,21 +2,24 @@ import Image from "next/image";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { RevealText } from "@/components/ui/reveal-text";
 import { FloralSprig } from "@/components/ui/floral-sprig";
+import { TiltCard } from "@/components/ui/tilt-card";
 
 export function About() {
   return (
     <section id="nosotros" className="section-py relative overflow-hidden bg-cream">
       <div className="container-px mx-auto grid max-w-content items-center gap-16 lg:grid-cols-2 lg:gap-24">
         <ScrollReveal className="relative order-2 lg:order-1">
-          <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[2px]">
-            <Image
-              src="/images/about.jpg"
-              alt="Composición decorativa SOLCA Decoraciones"
-              fill
-              sizes="(min-width: 1024px) 45vw, 90vw"
-              className="object-cover"
-            />
-          </div>
+          <TiltCard className="aspect-[4/5]" maxTilt={4}>
+            <div className="group relative h-full w-full overflow-hidden rounded-[2px]">
+              <Image
+                src="/images/about.jpg"
+                alt="Composición decorativa SOLCA Decoraciones"
+                fill
+                sizes="(min-width: 1024px) 45vw, 90vw"
+                className="object-cover transition-transform duration-[1200ms] ease-premium group-hover:scale-[1.05]"
+              />
+            </div>
+          </TiltCard>
           <div className="absolute -bottom-8 -right-6 hidden h-32 w-32 flex-col items-center justify-center gap-2 border border-gold/40 bg-cream sm:flex">
             <FloralSprig className="h-6 w-auto" />
             <span className="font-display text-sm italic text-gold-dark">Desde el detalle</span>
@@ -25,7 +28,8 @@ export function About() {
 
         <div className="order-1 lg:order-2">
           <ScrollReveal>
-            <p className="mb-5 text-xs font-medium uppercase tracking-widest2 text-gold-dark">
+            <p className="mb-5 flex items-center gap-2 text-xs font-medium uppercase tracking-widest2 text-gold-dark">
+              <FloralSprig className="h-4 w-auto" />
               Sobre nosotros
             </p>
           </ScrollReveal>

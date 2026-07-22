@@ -6,6 +6,7 @@ import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion
 import { ArrowDown } from "lucide-react";
 import { RevealText } from "@/components/ui/reveal-text";
 import { Button } from "@/components/ui/button";
+import { FloralSprig } from "@/components/ui/floral-sprig";
 
 export function Hero() {
   const ref = useRef<HTMLElement>(null);
@@ -36,7 +37,8 @@ export function Hero() {
         style={{ y: contentY, opacity: contentOpacity }}
         className="container-px relative z-10 mx-auto w-full max-w-content"
       >
-        <p className="mb-6 text-xs font-medium uppercase tracking-widest2 text-gold-light">
+        <p className="mb-6 flex items-center gap-2 text-xs font-medium uppercase tracking-widest2 text-gold-light">
+          <FloralSprig className="h-4 w-auto text-gold-light" />
           SOLCA Decoraciones
         </p>
 

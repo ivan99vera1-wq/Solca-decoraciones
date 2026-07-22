@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { RevealText } from "@/components/ui/reveal-text";
+import { FloralSprig } from "@/components/ui/floral-sprig";
 import { PROCESS_STEPS } from "@/lib/constants";
 
 export function Process() {
@@ -16,7 +17,8 @@ export function Process() {
       <div className="container-px relative mx-auto max-w-content">
         <div className="mx-auto max-w-2xl text-center">
           <ScrollReveal>
-            <p className="mb-5 text-xs font-medium uppercase tracking-widest2 text-gold-dark">
+            <p className="mb-5 flex items-center justify-center gap-2 text-xs font-medium uppercase tracking-widest2 text-gold-dark">
+              <FloralSprig className="h-4 w-auto" />
               Nuestro proceso
             </p>
           </ScrollReveal>

@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Quote } from "lucide-react";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
+import { FloralSprig } from "@/components/ui/floral-sprig";
 import { TESTIMONIALS } from "@/lib/constants";
 
 export function Testimonials() {
@@ -24,7 +25,8 @@ export function Testimonials() {
       <div className="container-px mx-auto max-w-content">
         <div className="mx-auto max-w-3xl text-center">
           <ScrollReveal>
-            <p className="mb-5 text-xs font-medium uppercase tracking-widest2 text-gold-dark">
+            <p className="mb-5 flex items-center justify-center gap-2 text-xs font-medium uppercase tracking-widest2 text-gold-dark">
+              <FloralSprig className="h-4 w-auto" flip />
               Opiniones
             </p>
           </ScrollReveal>

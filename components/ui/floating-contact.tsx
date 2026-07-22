@@ -43,6 +43,8 @@ export function FloatingContact() {
               initial={{ opacity: 0, y: 12, scale: 0.9 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: 12, scale: 0.9 }}
+              whileHover={{ scale: 1.12 }}
+              whileTap={{ scale: 0.92 }}
               transition={{ duration: 0.4, delay: i * 0.06, ease: [0.16, 1, 0.3, 1] }}
               className="group relative flex h-12 w-12 items-center justify-center rounded-full border border-ink/10 bg-ink text-cream shadow-[0_8px_24px_-8px_rgba(17,17,17,0.35)] transition-colors duration-300 hover:bg-stone-800"
             >

@@ -6,6 +6,8 @@ import { AnimatePresence, motion } from "framer-motion";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { RevealText } from "@/components/ui/reveal-text";
+import { FloralSprig } from "@/components/ui/floral-sprig";
+import { TiltCard } from "@/components/ui/tilt-card";
 import { GALLERY } from "@/lib/constants";
 
 export function Gallery() {
@@ -41,7 +43,8 @@ export function Gallery() {
       <div className="container-px mx-auto max-w-content">
         <div className="mx-auto max-w-2xl text-center">
           <ScrollReveal>
-            <p className="mb-5 text-xs font-medium uppercase tracking-widest2 text-gold-dark">
+            <p className="mb-5 flex items-center justify-center gap-2 text-xs font-medium uppercase tracking-widest2 text-gold-dark">
+              <FloralSprig className="h-4 w-auto" flip />
               Proyectos
             </p>
           </ScrollReveal>
@@ -55,27 +58,29 @@ export function Gallery() {
         <div className="mt-16 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:mt-20 lg:grid-cols-3 lg:gap-5">
           {GALLERY.map((item, i) => (
             <ScrollReveal key={item.title} delay={(i % 3) * 0.08}>
-              <button
-                type="button"
-                onClick={() => setActiveIndex(i)}
-                data-cursor-hover
-                className="group relative block aspect-[4/5] w-full overflow-hidden rounded-[2px] text-left"
-              >
-                <Image
-                  src={item.image}
-                  alt={item.title}
-                  fill
-                  sizes="(min-width: 1024px) 32vw, (min-width: 640px) 46vw, 92vw"
-                  className="object-cover transition-transform duration-[1200ms] ease-premium group-hover:scale-[1.06]"
-                />
-                <div className="absolute inset-0 bg-ink/0 transition-colors duration-500 group-hover:bg-ink/35" />
-                <div className="absolute inset-x-0 bottom-0 translate-y-3 p-6 opacity-0 transition-all duration-500 ease-premium group-hover:translate-y-0 group-hover:opacity-100">
-                  <p className="text-[10px] uppercase tracking-widest2 text-gold-light">
-                    {item.category}
-                  </p>
-                  <p className="mt-1 font-display text-lg text-cream">{item.title}</p>
-                </div>
-              </button>
+              <TiltCard className="aspect-[4/5]" maxTilt={5}>
+                <button
+                  type="button"
+                  onClick={() => setActiveIndex(i)}
+                  data-cursor-hover
+                  className="group relative block h-full w-full overflow-hidden rounded-[2px] text-left"
+                >
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    fill
+                    sizes="(min-width: 1024px) 32vw, (min-width: 640px) 46vw, 92vw"
+                    className="object-cover transition-transform duration-[1200ms] ease-premium group-hover:scale-[1.1]"
+                  />
+                  <div className="absolute inset-0 bg-ink/0 transition-colors duration-500 group-hover:bg-ink/35" />
+                  <div className="absolute inset-x-0 bottom-0 translate-y-3 p-6 opacity-0 transition-all duration-500 ease-premium group-hover:translate-y-0 group-hover:opacity-100">
+                    <p className="text-[10px] uppercase tracking-widest2 text-gold-light">
+                      {item.category}
+                    </p>
+                    <p className="mt-1 font-display text-lg text-cream">{item.title}</p>
+                  </div>
+                </button>
+              </TiltCard>
             </ScrollReveal>
           ))}
         </div>

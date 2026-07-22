@@ -2,6 +2,7 @@ import Image from "next/image";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { RevealText } from "@/components/ui/reveal-text";
 import { Button } from "@/components/ui/button";
+import { FloralSprig } from "@/components/ui/floral-sprig";
 
 export function Cta() {
   return (
@@ -11,7 +12,8 @@ export function Cta() {
 
       <div className="container-px relative mx-auto max-w-content text-center">
         <ScrollReveal>
-          <p className="mb-6 text-xs font-medium uppercase tracking-widest2 text-gold-light">
+          <p className="mb-6 flex items-center justify-center gap-2 text-xs font-medium uppercase tracking-widest2 text-gold-light">
+            <FloralSprig className="h-4 w-auto text-gold-light" />
             Empecemos
           </p>
         </ScrollReveal>

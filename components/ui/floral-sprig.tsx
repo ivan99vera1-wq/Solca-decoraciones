@@ -2,15 +2,16 @@ import { cn } from "@/lib/utils";
 
 type FloralSprigProps = {
   className?: string;
+  flip?: boolean;
 };
 
-export function FloralSprig({ className }: FloralSprigProps) {
+export function FloralSprig({ className, flip }: FloralSprigProps) {
   return (
     <svg
       viewBox="0 0 40 56"
       fill="none"
       aria-hidden="true"
-      className={cn("text-gold", className)}
+      className={cn("text-gold", flip && "-scale-x-100", className)}
     >
       <path
         d="M20 52C17 40 23 30 21 18C20 12 24 8 25 4"
