@@ -73,6 +73,10 @@ export const GALLERY: GalleryItem[] = [
   { title: "Cumpleaños temático fútbol", category: "Eventos", image: "/images/work-10.jpg" },
   { title: "Cumpleaños temático capibara", category: "Eventos", image: "/images/work-11.jpg" },
   { title: "Ambientación dorada con neón", category: "Eventos", image: "/images/work-12.jpg" },
+  { title: "Cumpleaños elegante negro y plata", category: "Eventos", image: "/images/work-13.jpg" },
+  { title: "Cumpleaños temático Mujer Maravilla", category: "Eventos", image: "/images/work-14.jpg" },
+  { title: "Cumpleaños temático fresas", category: "Eventos", image: "/images/work-15.jpg" },
+  { title: "Evento glam rosa y plata", category: "Eventos", image: "/images/work-16.jpg" },
 ];
 
 export const PROCESS_STEPS = [
