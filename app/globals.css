@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-inter: theme(fontFamily.sans);
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+html {
+  background-color: #faf8f5;
+}
+
+body {
+  background-color: #faf8f5;
+  color: #111111;
+  font-feature-settings: "ss01" 1, "cv01" 1;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background-color: #111111;
+  color: #faf8f5;
+}
+
+/* Custom cursor: hide native cursor only where our cursor is active (desktop, fine pointer) */
+@media (hover: hover) and (pointer: fine) {
+  html.custom-cursor,
+  html.custom-cursor a,
+  html.custom-cursor button {
+    cursor: none;
+  }
+}
+
+.container-px {
+  @apply px-6 sm:px-8 lg:px-12;
+}
+
+.section-py {
+  @apply py-24 sm:py-32 lg:py-40;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+/* subtle grain overlay */
+.grain::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  pointer-events: none;
+  opacity: 0.035;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 120px 120px;
+}
+
+.link-underline {
+  position: relative;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 1px;
+  transition: background-size 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.link-underline:hover {
+  background-size: 100% 1px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
