@@ -63,8 +63,11 @@ export type GalleryItem = {
 };
 
 export const GALLERY: GalleryItem[] = [
-  { title: "Ambientación de cumpleaños", category: "Eventos", image: "/images/work-1.jpg" },
-  { title: "Arco de globos y flores", category: "Eventos", image: "/images/work-2.jpg" },
+  { title: "Ambientación rosa y dorado", category: "Eventos", image: "/images/work-3.jpg" },
+  { title: "Arco dorado y girasoles", category: "Eventos", image: "/images/work-4.jpg" },
+  { title: "Baby shower Pequeño Príncipe", category: "Eventos", image: "/images/work-5.jpg" },
+  { title: "Cumpleaños esmeralda y dorado", category: "Eventos", image: "/images/work-6.jpg" },
+  { title: "Ambientación dorada", category: "Eventos", image: "/images/work-7.jpg" },
   { title: "Salón contemporáneo", category: "Interiorismo", image: "/images/gallery-1.jpg" },
   { title: "Celebración íntima", category: "Eventos", image: "/images/gallery-2.jpg" },
   { title: "Suite principal", category: "Interiorismo", image: "/images/gallery-3.jpg" },
