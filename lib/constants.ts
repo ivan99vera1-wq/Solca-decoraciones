@@ -3,7 +3,7 @@ export const SITE = {
   shortName: "SOLCA",
   tagline: "Diseñamos espacios que inspiran.",
   description:
-    "Decoración de interiores, eventos y reformas decorativas con acabados de alta calidad. Diseño personalizado en cada detalle.",
+    "Decoración de interiores, ambientación de eventos y manualidades con acabados de alta calidad. Regalos personalizados y maquetas hechas a mano, con diseño cuidado en cada detalle.",
   url: "https://solcadecoraciones.com",
   locale: "es_PY",
   instagram: "https://www.instagram.com/solcamila_manualidades",
@@ -11,7 +11,7 @@ export const SITE = {
   phone: "+595 983 888009",
   phoneHref: "tel:+595983888009",
   whatsapp: "https://wa.me/595983888009",
-  email: "hola@solcadecoraciones.com",
+  email: "evitamespinola@gmail.com",
   location: "Paraguay",
 };
 
@@ -26,32 +26,32 @@ export const NAV_LINKS = [
 export type Service = {
   title: string;
   description: string;
-  icon: "sofa" | "sparkles" | "hammer" | "compass";
+  icon: "sofa" | "sparkles" | "gift" | "compass";
 };
 
 export const SERVICES: Service[] = [
   {
     title: "Decoración de interiores",
     description:
-      "Proyectos integrales de interiorismo que combinan estética, funcionalidad y confort para transformar cada estancia.",
+      "Ambientación integral de espacios que combina estética, funcionalidad y confort para transformar cada estancia.",
     icon: "sofa",
   },
   {
-    title: "Decoración de eventos",
+    title: "Ambientación de eventos",
     description:
-      "Ambientaciones a medida para celebraciones y eventos, cuidando cada detalle para crear momentos memorables.",
+      "Arcos de globos, flores y ambientaciones a medida para cumpleaños, baby showers y celebraciones inolvidables.",
     icon: "sparkles",
   },
   {
-    title: "Reformas decorativas",
+    title: "Manualidades y regalos personalizados",
     description:
-      "Renovamos espacios con acabados de alta calidad, integrando diseño y arquitectura de interiores con precisión.",
-    icon: "hammer",
+      "Piezas artesanales y regalos a medida, cuidados en cada detalle para hacer único cualquier momento.",
+    icon: "gift",
   },
   {
-    title: "Asesoramiento personalizado",
+    title: "Asesoramiento y maquetas",
     description:
-      "Acompañamiento cercano en cada etapa del proyecto, desde la primera idea hasta la última pieza colocada.",
+      "Acompañamiento cercano y maquetas personalizadas para visualizar tu proyecto antes de hacerlo realidad.",
     icon: "compass",
   },
 ];
@@ -63,9 +63,11 @@ export type GalleryItem = {
 };
 
 export const GALLERY: GalleryItem[] = [
+  { title: "Ambientación de cumpleaños", category: "Eventos", image: "/images/work-1.jpg" },
+  { title: "Arco de globos y flores", category: "Eventos", image: "/images/work-2.jpg" },
   { title: "Salón contemporáneo", category: "Interiorismo", image: "/images/gallery-1.jpg" },
   { title: "Celebración íntima", category: "Eventos", image: "/images/gallery-2.jpg" },
-  { title: "Suite principal", category: "Reforma decorativa", image: "/images/gallery-3.jpg" },
+  { title: "Suite principal", category: "Interiorismo", image: "/images/gallery-3.jpg" },
   { title: "Rincón de lectura", category: "Interiorismo", image: "/images/gallery-4.jpg" },
   { title: "Mesa de gala", category: "Eventos", image: "/images/gallery-5.jpg" },
   { title: "Estudio boutique", category: "Interiorismo", image: "/images/gallery-6.jpg" },
@@ -110,7 +112,7 @@ export const TESTIMONIALS: Testimonial[] = [
 
 export const SERVICE_OPTIONS = [
   "Decoración de interiores",
-  "Decoración de eventos",
-  "Reformas decorativas",
-  "Asesoramiento personalizado",
+  "Ambientación de eventos",
+  "Manualidades y regalos personalizados",
+  "Asesoramiento y maquetas",
 ];

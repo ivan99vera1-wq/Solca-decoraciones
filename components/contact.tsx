@@ -5,7 +5,8 @@ import { Instagram, Mail, MapPin, Phone, Send } from "lucide-react";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { RevealText } from "@/components/ui/reveal-text";
 import { Magnetic } from "@/components/ui/magnetic";
-import { SITE } from "@/lib/constants";
+import { FloralSprig } from "@/components/ui/floral-sprig";
+import { SITE, SERVICE_OPTIONS } from "@/lib/constants";
 
 type Status = "idle" | "sent";
 
@@ -19,10 +20,11 @@ export function Contact() {
     const nombre = String(data.get("nombre") ?? "");
     const telefono = String(data.get("telefono") ?? "");
     const correo = String(data.get("correo") ?? "");
+    const servicio = String(data.get("servicio") ?? "");
     const mensaje = String(data.get("mensaje") ?? "");
 
     const body = encodeURIComponent(
-      `Nombre: ${nombre}\nTeléfono: ${telefono}\nCorreo: ${correo}\n\n${mensaje}`
+      `Nombre: ${nombre}\nTeléfono: ${telefono}\nCorreo: ${correo}\nServicio: ${servicio}\n\n${mensaje}`
     );
     window.location.href = `mailto:${SITE.email}?subject=${encodeURIComponent(
       "Solicitud de presupuesto — " + nombre
@@ -38,7 +40,8 @@ export function Contact() {
         <div className="grid gap-16 lg:grid-cols-5 lg:gap-12">
           <div className="lg:col-span-2">
             <ScrollReveal>
-              <p className="mb-5 text-xs font-medium uppercase tracking-widest2 text-gold-dark">
+              <p className="mb-5 flex items-center gap-2 text-xs font-medium uppercase tracking-widest2 text-gold-dark">
+                <FloralSprig className="h-4 w-auto" />
                 Contacto
               </p>
             </ScrollReveal>
@@ -108,7 +111,27 @@ export function Contact() {
             <form onSubmit={handleSubmit} className="grid grid-cols-1 gap-6 sm:grid-cols-2">
               <Field label="Nombre" name="nombre" autoComplete="name" required />
               <Field label="Teléfono" name="telefono" type="tel" autoComplete="tel" />
-              <Field label="Correo" name="correo" type="email" autoComplete="email" required className="sm:col-span-2" />
+              <Field label="Correo" name="correo" type="email" autoComplete="email" required />
+              <div>
+                <label htmlFor="servicio" className="mb-2 block text-xs uppercase tracking-widest2 text-stone-500">
+                  Servicio
+                </label>
+                <select
+                  id="servicio"
+                  name="servicio"
+                  defaultValue=""
+                  className="w-full border-b border-stone-300 bg-transparent py-2 text-[15px] text-ink outline-none transition-colors focus:border-ink"
+                >
+                  <option value="" disabled>
+                    Selecciona una opción
+                  </option>
+                  {SERVICE_OPTIONS.map((option) => (
+                    <option key={option} value={option}>
+                      {option}
+                    </option>
+                  ))}
+                </select>
+              </div>
               <div className="sm:col-span-2">
                 <label htmlFor="mensaje" className="mb-2 block text-xs uppercase tracking-widest2 text-stone-500">
                   Mensaje

@@ -1,5 +1,6 @@
 import { Instagram, MessageCircle } from "lucide-react";
 import { Logo } from "@/components/ui/logo";
+import { FloralSprig } from "@/components/ui/floral-sprig";
 import { SITE, NAV_LINKS } from "@/lib/constants";
 
 export function Footer() {
@@ -45,7 +46,10 @@ export function Footer() {
 
         <div className="mt-12 flex flex-col items-start justify-between gap-4 border-t border-stone-200 pt-8 text-xs text-stone-400 sm:flex-row sm:items-center">
           <p>© {new Date().getFullYear()} {SITE.name}. Todos los derechos reservados.</p>
-          <p>Diseño &amp; desarrollo con dedicación artesanal.</p>
+          <p className="flex items-center gap-2">
+            <FloralSprig className="h-4 w-auto" />
+            Hecho a mano, con dedicación artesanal.
+          </p>
         </div>
       </div>
     </footer>

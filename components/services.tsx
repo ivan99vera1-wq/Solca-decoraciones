@@ -1,6 +1,6 @@
 "use client";
 
-import { Sofa, Sparkles, Hammer, Compass, ArrowUpRight, type LucideIcon } from "lucide-react";
+import { Sofa, Sparkles, Gift, Compass, ArrowUpRight, type LucideIcon } from "lucide-react";
 import { motion } from "framer-motion";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { RevealText } from "@/components/ui/reveal-text";
@@ -9,7 +9,7 @@ import { SERVICES, type Service } from "@/lib/constants";
 const ICONS: Record<Service["icon"], LucideIcon> = {
   sofa: Sofa,
   sparkles: Sparkles,
-  hammer: Hammer,
+  gift: Gift,
   compass: Compass,
 };
 

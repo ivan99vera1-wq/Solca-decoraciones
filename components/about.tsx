@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { RevealText } from "@/components/ui/reveal-text";
+import { FloralSprig } from "@/components/ui/floral-sprig";
 
 export function About() {
   return (
@@ -16,7 +17,8 @@ export function About() {
               className="object-cover"
             />
           </div>
-          <div className="absolute -bottom-8 -right-6 hidden h-32 w-32 items-center justify-center border border-gold/40 sm:flex">
+          <div className="absolute -bottom-8 -right-6 hidden h-32 w-32 flex-col items-center justify-center gap-2 border border-gold/40 bg-cream sm:flex">
+            <FloralSprig className="h-6 w-auto" />
             <span className="font-display text-sm italic text-gold-dark">Desde el detalle</span>
           </div>
         </ScrollReveal>
@@ -29,19 +31,20 @@ export function About() {
           </ScrollReveal>
           <ScrollReveal delay={0.05}>
             <h2 className="font-display text-3xl font-normal leading-tight text-ink sm:text-4xl lg:text-[2.75rem]">
-              <RevealText text="Interiorismo con carácter, pensado para durar." />
+              <RevealText text="Cada detalle, hecho con dedicación artesanal." />
             </h2>
           </ScrollReveal>
           <ScrollReveal delay={0.15}>
             <p className="mt-7 max-w-lg text-balance text-[15px] font-light leading-relaxed text-stone-600 sm:text-base">
-              En SOLCA Decoraciones creemos que cada espacio cuenta una historia. Combinamos
-              sensibilidad estética y precisión técnica para crear ambientes que reflejan la
-              identidad de quienes los habitan, cuidando materiales, proporciones y luz en cada
-              proyecto.
+              En SOLCA Decoraciones creemos que cada espacio y cada celebración cuentan una
+              historia. Combinamos sensibilidad estética y trabajo artesanal para crear
+              ambientaciones, decoración de eventos y piezas personalizadas que reflejan la
+              identidad de quienes las encargan.
             </p>
             <p className="mt-5 max-w-lg text-balance text-[15px] font-light leading-relaxed text-stone-600 sm:text-base">
-              Trabajamos de la mano de artesanos y proveedores seleccionados para garantizar
-              acabados de la más alta calidad, desde el primer boceto hasta la última pieza.
+              Desde arcos de globos y ambientaciones florales hasta manualidades y regalos a
+              medida, cuidamos materiales, proporciones y color en cada proyecto, grande o
+              pequeño.
             </p>
           </ScrollReveal>
 

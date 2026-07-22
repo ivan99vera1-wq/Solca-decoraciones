@@ -26,10 +26,11 @@ export const metadata: Metadata = {
   description: SITE.description,
   keywords: [
     "decoración de interiores",
-    "interiorismo",
-    "decoración de eventos",
-    "reformas decorativas",
-    "diseño de interiores premium",
+    "ambientación de eventos",
+    "manualidades",
+    "regalos personalizados",
+    "arcos de globos",
+    "maquetas",
     "SOLCA Decoraciones",
   ],
   authors: [{ name: SITE.name }],
@@ -83,7 +84,7 @@ export const viewport: Viewport = {
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "HomeAndConstructionBusiness",
+  "@type": "LocalBusiness",
   name: SITE.name,
   description: SITE.description,
   url: SITE.url,
