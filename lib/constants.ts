@@ -5,14 +5,14 @@ export const SITE = {
   description:
     "Decoración de interiores, eventos y reformas decorativas con acabados de alta calidad. Diseño personalizado en cada detalle.",
   url: "https://solcadecoraciones.com",
-  locale: "es_ES",
+  locale: "es_PY",
   instagram: "https://www.instagram.com/solcamila_manualidades",
   instagramHandle: "@solcamila_manualidades",
-  phone: "+34 600 000 000",
-  phoneHref: "tel:+34600000000",
-  whatsapp: "https://wa.me/34600000000",
+  phone: "+595 983 888009",
+  phoneHref: "tel:+595983888009",
+  whatsapp: "https://wa.me/595983888009",
   email: "hola@solcadecoraciones.com",
-  location: "España",
+  location: "Paraguay",
 };
 
 export const NAV_LINKS = [

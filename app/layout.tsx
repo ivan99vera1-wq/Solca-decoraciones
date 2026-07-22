@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 import { CustomCursor } from "@/components/ui/custom-cursor";
+import { FloatingContact } from "@/components/ui/floating-contact";
 import { SITE } from "@/lib/constants";
 import "./globals.css";
 
@@ -92,10 +93,10 @@ const jsonLd = {
   sameAs: [SITE.instagram],
   address: {
     "@type": "PostalAddress",
-    addressCountry: "ES",
+    addressCountry: "PY",
   },
-  priceRange: "€€€",
-  areaServed: "ES",
+  priceRange: "$$$",
+  areaServed: "PY",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -108,6 +109,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
         <CustomCursor />
         {children}
+        <FloatingContact />
       </body>
     </html>
   );
